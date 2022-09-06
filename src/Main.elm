@@ -29,6 +29,7 @@ view model =
     div []
         [ h1 [] [ text "Phillemove - Sofware Developer" ]
         , text model
+        , text "This site is under construction. In a few Days you will see more about me here"
         ]
 
 
