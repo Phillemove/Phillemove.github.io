@@ -1,8 +1,7 @@
 module Main exposing (main)
 
 import Browser
-import Html exposing (..)
-import Html.Attributes exposing (..)
+import Html exposing (Html, br, div, h1, text)
 
 
 type alias Model =
@@ -29,6 +28,7 @@ view model =
     div []
         [ h1 [] [ text "Phillemove - Sofware Developer" ]
         , text model
+        , br [] []
         , text "This site is under construction. In a few Days you will see more about me here"
         ]
 
