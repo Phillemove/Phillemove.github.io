@@ -1,14 +1,23 @@
 module Main exposing (main)
 
 import Browser
-import Html exposing (Html, br, div, h1, text)
+import Html exposing (Html, br, div, h1, span, text)
+import Html.Events exposing (onClick)
+import Page
+import Styles exposing (..)
 
 
 type alias Model =
-    String
+    { page : Page.Page }
 
 
-main : Program () Model msg
+type Msg
+    = Projects
+    | About
+    | Home
+
+
+main : Program () Model Msg
 main =
     Browser.element
         { init = \_ -> init
@@ -18,23 +27,57 @@ main =
         }
 
 
-init : ( Model, Cmd msg )
+init : ( Model, Cmd Msg )
 init =
-    ( "Hi I'm Philipp. I am a Software Developer based in Flensburg Germany. \n I am interested in functional programming Languages and Web-Programming languages", Cmd.none )
+    ( { page = Page.None }, Cmd.none )
 
 
-view : Model -> Html msg
+view : Model -> Html Msg
 view model =
-    div []
-        [ h1 [] [ text "Phillemove - Sofware Developer" ]
-        , text model
+    div mainGridStyles
+        [ div headerGridStyles
+            [ h1 [] [ text "Phillemove - Sofware Developer" ]
+            , span (onClick Home :: clickableStyle) [ text "Home" ]
+            , span (onClick Projects :: clickableStyle) [ text "Projects" ]
+            , span (onClick About :: clickableStyle) [ text "About me" ]
+            ]
         , br [] []
-        , text "This site is under construction. In a few Days you will see more about me here"
+        , div subGridStyles [ pageContentView model ]
         ]
 
 
-update : msg -> Model -> ( Model, Cmd msg )
+update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     case msg of
-        _ ->
-            ( model, Cmd.none )
+        Projects ->
+            ( { model | page = Page.Projects }, Cmd.none )
+
+        About ->
+            ( { model | page = Page.About }, Cmd.none )
+
+        Home ->
+            ( { model | page = Page.None }, Cmd.none )
+
+
+pageContentView : Model -> Html Msg
+pageContentView model =
+    case model.page of
+        Page.Projects ->
+            div []
+                [ h1 [] [ text "My Projects" ]
+                , text "This site is under construction. In a few Days you will see more about me here"
+                ]
+
+        Page.About ->
+            div []
+                [ h1 [] [ text "About me" ]
+                , text "This site is under construction. In a few Days you will see more about me here"
+                ]
+
+        Page.None ->
+            pageInitView
+
+
+pageInitView : Html Msg
+pageInitView =
+    div [] [ text "Hi, I am Philipp. I am a Software Developer from Flensburg Germany. On this Page you will find something about me and my projects. Have fun while exploring it" ]

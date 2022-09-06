@@ -5173,36 +5173,202 @@ var $elm$core$Task$perform = F2(
 				A2($elm$core$Task$map, toMessage, task)));
 	});
 var $elm$browser$Browser$element = _Browser_element;
+var $author$project$Page$None = {$: 'None'};
 var $elm$core$Platform$Cmd$batch = _Platform_batch;
 var $elm$core$Platform$Cmd$none = $elm$core$Platform$Cmd$batch(_List_Nil);
-var $author$project$Main$init = _Utils_Tuple2('Hi I\'m Philipp. I am a Software Developer based in Flensburg Germany. \n I am interested in functional programming Languages and Web-Programming languages', $elm$core$Platform$Cmd$none);
+var $author$project$Main$init = _Utils_Tuple2(
+	{page: $author$project$Page$None},
+	$elm$core$Platform$Cmd$none);
 var $elm$core$Platform$Sub$batch = _Platform_batch;
 var $elm$core$Platform$Sub$none = $elm$core$Platform$Sub$batch(_List_Nil);
+var $author$project$Page$About = {$: 'About'};
+var $author$project$Page$Projects = {$: 'Projects'};
 var $author$project$Main$update = F2(
 	function (msg, model) {
-		return _Utils_Tuple2(model, $elm$core$Platform$Cmd$none);
+		switch (msg.$) {
+			case 'Projects':
+				return _Utils_Tuple2(
+					_Utils_update(
+						model,
+						{page: $author$project$Page$Projects}),
+					$elm$core$Platform$Cmd$none);
+			case 'About':
+				return _Utils_Tuple2(
+					_Utils_update(
+						model,
+						{page: $author$project$Page$About}),
+					$elm$core$Platform$Cmd$none);
+			default:
+				return _Utils_Tuple2(
+					_Utils_update(
+						model,
+						{page: $author$project$Page$None}),
+					$elm$core$Platform$Cmd$none);
+		}
 	});
+var $author$project$Main$About = {$: 'About'};
+var $author$project$Main$Home = {$: 'Home'};
+var $author$project$Main$Projects = {$: 'Projects'};
 var $elm$html$Html$br = _VirtualDom_node('br');
+var $elm$virtual_dom$VirtualDom$style = _VirtualDom_style;
+var $elm$html$Html$Attributes$style = $elm$virtual_dom$VirtualDom$style;
+var $author$project$Styles$clickableStyle = _List_fromArray(
+	[
+		A2($elm$html$Html$Attributes$style, 'cursor', 'pointer'),
+		A2($elm$html$Html$Attributes$style, 'color', 'gray'),
+		A2($elm$html$Html$Attributes$style, 'margin-right', '1em')
+	]);
 var $elm$html$Html$div = _VirtualDom_node('div');
 var $elm$html$Html$h1 = _VirtualDom_node('h1');
+var $author$project$Styles$headerGridStyles = _List_fromArray(
+	[
+		A2($elm$html$Html$Attributes$style, 'grid-row', '1/2'),
+		A2($elm$html$Html$Attributes$style, 'grid-column', '1/ span 2')
+	]);
+var $author$project$Styles$mainGridStyles = _List_fromArray(
+	[
+		A2($elm$html$Html$Attributes$style, 'display', 'grid'),
+		A2($elm$html$Html$Attributes$style, 'width', '90%'),
+		A2($elm$html$Html$Attributes$style, 'grid-template-rows', '10% 90%'),
+		A2($elm$html$Html$Attributes$style, 'grid-template-columns', '75% 25%'),
+		A2($elm$html$Html$Attributes$style, 'margin', 'auto'),
+		A2($elm$html$Html$Attributes$style, 'margin-top', '0.1em'),
+		A2($elm$html$Html$Attributes$style, 'font-family', 'verdana'),
+		A2($elm$html$Html$Attributes$style, 'background-color', 'white')
+	]);
+var $elm$virtual_dom$VirtualDom$Normal = function (a) {
+	return {$: 'Normal', a: a};
+};
+var $elm$virtual_dom$VirtualDom$on = _VirtualDom_on;
+var $elm$html$Html$Events$on = F2(
+	function (event, decoder) {
+		return A2(
+			$elm$virtual_dom$VirtualDom$on,
+			event,
+			$elm$virtual_dom$VirtualDom$Normal(decoder));
+	});
+var $elm$html$Html$Events$onClick = function (msg) {
+	return A2(
+		$elm$html$Html$Events$on,
+		'click',
+		$elm$json$Json$Decode$succeed(msg));
+};
 var $elm$virtual_dom$VirtualDom$text = _VirtualDom_text;
 var $elm$html$Html$text = $elm$virtual_dom$VirtualDom$text;
-var $author$project$Main$view = function (model) {
-	return A2(
-		$elm$html$Html$div,
-		_List_Nil,
-		_List_fromArray(
-			[
-				A2(
-				$elm$html$Html$h1,
+var $author$project$Main$pageInitView = A2(
+	$elm$html$Html$div,
+	_List_Nil,
+	_List_fromArray(
+		[
+			$elm$html$Html$text('Hi, I am Philipp. I am a Software Developer from Flensburg Germany. On this Page you will find something about me and my projects. Have fun while exploring it')
+		]));
+var $author$project$Main$pageContentView = function (model) {
+	var _v0 = model.page;
+	switch (_v0.$) {
+		case 'Projects':
+			return A2(
+				$elm$html$Html$div,
 				_List_Nil,
 				_List_fromArray(
 					[
-						$elm$html$Html$text('Phillemove - Sofware Developer')
+						A2(
+						$elm$html$Html$h1,
+						_List_Nil,
+						_List_fromArray(
+							[
+								$elm$html$Html$text('My Projects')
+							])),
+						$elm$html$Html$text('This site is under construction. In a few Days you will see more about me here')
+					]));
+		case 'About':
+			return A2(
+				$elm$html$Html$div,
+				_List_Nil,
+				_List_fromArray(
+					[
+						A2(
+						$elm$html$Html$h1,
+						_List_Nil,
+						_List_fromArray(
+							[
+								$elm$html$Html$text('About me')
+							])),
+						$elm$html$Html$text('This site is under construction. In a few Days you will see more about me here')
+					]));
+		default:
+			return $author$project$Main$pageInitView;
+	}
+};
+var $elm$html$Html$span = _VirtualDom_node('span');
+var $author$project$Styles$subGridStyles = _List_fromArray(
+	[
+		A2($elm$html$Html$Attributes$style, 'grid-column', '1/2'),
+		A2($elm$html$Html$Attributes$style, 'grid-row', '2/2'),
+		A2($elm$html$Html$Attributes$style, 'grid-template-rows', 'subgrid'),
+		A2($elm$html$Html$Attributes$style, 'position', 'sticky'),
+		A2($elm$html$Html$Attributes$style, 'top', '0'),
+		A2($elm$html$Html$Attributes$style, 'height', '100vh'),
+		A2($elm$html$Html$Attributes$style, 'box-sizing', 'border-box'),
+		A2($elm$html$Html$Attributes$style, 'margin-top', '1em'),
+		A2($elm$html$Html$Attributes$style, 'overflow-y', 'scroll')
+	]);
+var $author$project$Main$view = function (model) {
+	return A2(
+		$elm$html$Html$div,
+		$author$project$Styles$mainGridStyles,
+		_List_fromArray(
+			[
+				A2(
+				$elm$html$Html$div,
+				$author$project$Styles$headerGridStyles,
+				_List_fromArray(
+					[
+						A2(
+						$elm$html$Html$h1,
+						_List_Nil,
+						_List_fromArray(
+							[
+								$elm$html$Html$text('Phillemove - Sofware Developer')
+							])),
+						A2(
+						$elm$html$Html$span,
+						A2(
+							$elm$core$List$cons,
+							$elm$html$Html$Events$onClick($author$project$Main$Home),
+							$author$project$Styles$clickableStyle),
+						_List_fromArray(
+							[
+								$elm$html$Html$text('Home')
+							])),
+						A2(
+						$elm$html$Html$span,
+						A2(
+							$elm$core$List$cons,
+							$elm$html$Html$Events$onClick($author$project$Main$Projects),
+							$author$project$Styles$clickableStyle),
+						_List_fromArray(
+							[
+								$elm$html$Html$text('Projects')
+							])),
+						A2(
+						$elm$html$Html$span,
+						A2(
+							$elm$core$List$cons,
+							$elm$html$Html$Events$onClick($author$project$Main$About),
+							$author$project$Styles$clickableStyle),
+						_List_fromArray(
+							[
+								$elm$html$Html$text('About me')
+							]))
 					])),
-				$elm$html$Html$text(model),
 				A2($elm$html$Html$br, _List_Nil, _List_Nil),
-				$elm$html$Html$text('This site is under construction. In a few Days you will see more about me here')
+				A2(
+				$elm$html$Html$div,
+				$author$project$Styles$subGridStyles,
+				_List_fromArray(
+					[
+						$author$project$Main$pageContentView(model)
+					]))
 			]));
 };
 var $author$project$Main$main = $elm$browser$Browser$element(
