@@ -21,12 +21,15 @@ main =
 
 init : ( Model, Cmd msg )
 init =
-    ( "Hello World", Cmd.none )
+    ( "Hi I'm Philipp. I am a Software Developer based in Flensburg Germany. \n I am interested in functional programming Languages and Web-Programming languages", Cmd.none )
 
 
 view : Model -> Html msg
 view model =
-    div [] [ text model ]
+    div []
+        [ h1 [] [ text "Phillemove - Sofware Developer" ]
+        , text model
+        ]
 
 
 update : msg -> Model -> ( Model, Cmd msg )
