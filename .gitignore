@@ -1,0 +1,12 @@
+# Mac
+.DS_Store
+
+# IntelliJ
+.idea
+
+# elm
+elm-stuff
+repl-temp-*
+
+# elm-review
+review
