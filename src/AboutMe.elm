@@ -10,7 +10,7 @@ aboutMeView =
         , div []
             [ text "My name is Philipp and i'm living in Harrislee near Flensburg in the north of Germany directly on the danish border."
             , br [] []
-            , text "I work as a Network Administrator about 6 years. Then i decided to continue my education and start studying Applied computer science on Flensburg university of applied sciences."
+            , text "I worked as a Network Administrator for 6 years. Then i decided to continue my education and started studying applied computer science on Flensburg university of applied sciences."
             , br [] []
             , text "During the studies i learned a lot about software developing and get more and more interested in it. From all concepts of programming i like most functional programming."
             , br [] []
