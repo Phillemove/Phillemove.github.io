@@ -5223,7 +5223,8 @@ var $elm$html$Html$h1 = _VirtualDom_node('h1');
 var $author$project$Styles$headerGridStyles = _List_fromArray(
 	[
 		A2($elm$html$Html$Attributes$style, 'grid-row', '1/2'),
-		A2($elm$html$Html$Attributes$style, 'grid-column', '1/ span 2')
+		A2($elm$html$Html$Attributes$style, 'grid-column', '1/ span 2'),
+		A2($elm$html$Html$Attributes$style, 'border-bottom', 'solid 2px lightgray')
 	]);
 var $author$project$Styles$mainGridStyles = _List_fromArray(
 	[
@@ -5253,50 +5254,177 @@ var $elm$html$Html$Events$onClick = function (msg) {
 		'click',
 		$elm$json$Json$Decode$succeed(msg));
 };
+var $elm$html$Html$h3 = _VirtualDom_node('h3');
+var $elm$html$Html$li = _VirtualDom_node('li');
 var $elm$virtual_dom$VirtualDom$text = _VirtualDom_text;
 var $elm$html$Html$text = $elm$virtual_dom$VirtualDom$text;
-var $author$project$Main$pageInitView = A2(
+var $elm$html$Html$ul = _VirtualDom_node('ul');
+var $author$project$AboutMe$aboutMeView = A2(
+	$elm$html$Html$div,
+	_List_Nil,
+	_List_fromArray(
+		[
+			A2(
+			$elm$html$Html$h3,
+			_List_Nil,
+			_List_fromArray(
+				[
+					$elm$html$Html$text('About Me')
+				])),
+			A2(
+			$elm$html$Html$div,
+			_List_Nil,
+			_List_fromArray(
+				[
+					$elm$html$Html$text('My name is Philipp and i\'m living in Harrislee near Flensburg in the north of Germany directly on the danish border.'),
+					A2($elm$html$Html$br, _List_Nil, _List_Nil),
+					$elm$html$Html$text('I work as a Network Administrator about 6 years. Then i decided to continue my education and start studying Applied computer science on Flensburg university of applied sciences.'),
+					A2($elm$html$Html$br, _List_Nil, _List_Nil),
+					$elm$html$Html$text('During the studies i learned a lot about software developing and get more and more interested in it. From all concepts of programming i like most functional programming.'),
+					A2($elm$html$Html$br, _List_Nil, _List_Nil),
+					$elm$html$Html$text('My Portfolio of Programming languages and Technologies are:'),
+					A2(
+					$elm$html$Html$ul,
+					_List_Nil,
+					_List_fromArray(
+						[
+							A2(
+							$elm$html$Html$li,
+							_List_Nil,
+							_List_fromArray(
+								[
+									$elm$html$Html$text('Java')
+								])),
+							A2(
+							$elm$html$Html$li,
+							_List_Nil,
+							_List_fromArray(
+								[
+									$elm$html$Html$text('JavaScript')
+								])),
+							A2(
+							$elm$html$Html$li,
+							_List_Nil,
+							_List_fromArray(
+								[
+									$elm$html$Html$text('Go')
+								])),
+							A2(
+							$elm$html$Html$li,
+							_List_Nil,
+							_List_fromArray(
+								[
+									$elm$html$Html$text('Kotlin')
+								])),
+							A2(
+							$elm$html$Html$li,
+							_List_Nil,
+							_List_fromArray(
+								[
+									$elm$html$Html$text('Haskell')
+								])),
+							A2(
+							$elm$html$Html$li,
+							_List_Nil,
+							_List_fromArray(
+								[
+									$elm$html$Html$text('Elm')
+								])),
+							A2(
+							$elm$html$Html$li,
+							_List_Nil,
+							_List_fromArray(
+								[
+									$elm$html$Html$text('C#')
+								])),
+							A2(
+							$elm$html$Html$li,
+							_List_Nil,
+							_List_fromArray(
+								[
+									$elm$html$Html$text('Node.JS')
+								])),
+							A2(
+							$elm$html$Html$li,
+							_List_Nil,
+							_List_fromArray(
+								[
+									$elm$html$Html$text('HTML')
+								])),
+							A2(
+							$elm$html$Html$li,
+							_List_Nil,
+							_List_fromArray(
+								[
+									$elm$html$Html$text('Unity 3D')
+								])),
+							A2(
+							$elm$html$Html$li,
+							_List_Nil,
+							_List_fromArray(
+								[
+									$elm$html$Html$text('git')
+								])),
+							A2(
+							$elm$html$Html$li,
+							_List_Nil,
+							_List_fromArray(
+								[
+									$elm$html$Html$text('WPF')
+								])),
+							A2(
+							$elm$html$Html$li,
+							_List_Nil,
+							_List_fromArray(
+								[
+									$elm$html$Html$text('Java EE')
+								])),
+							A2(
+							$elm$html$Html$li,
+							_List_Nil,
+							_List_fromArray(
+								[
+									$elm$html$Html$text('SQL')
+								])),
+							A2(
+							$elm$html$Html$li,
+							_List_Nil,
+							_List_fromArray(
+								[
+									$elm$html$Html$text('MongoDB')
+								]))
+						]))
+				]))
+		]));
+var $author$project$MyProjects$myProjectsView = A2(
+	$elm$html$Html$div,
+	_List_Nil,
+	_List_fromArray(
+		[
+			A2(
+			$elm$html$Html$h3,
+			_List_Nil,
+			_List_fromArray(
+				[
+					$elm$html$Html$text('My Projects')
+				])),
+			$elm$html$Html$text('This site is under construction. In a few Days you will see more about me here')
+		]));
+var $author$project$Page$pageInitView = A2(
 	$elm$html$Html$div,
 	_List_Nil,
 	_List_fromArray(
 		[
 			$elm$html$Html$text('Hi, I am Philipp. I am a Software Developer from Flensburg Germany. On this Page you will find something about me and my projects. Have fun while exploring it')
 		]));
-var $author$project$Main$pageContentView = function (model) {
-	var _v0 = model.page;
-	switch (_v0.$) {
+var $author$project$Page$pageContentView = function (page) {
+	switch (page.$) {
 		case 'Projects':
-			return A2(
-				$elm$html$Html$div,
-				_List_Nil,
-				_List_fromArray(
-					[
-						A2(
-						$elm$html$Html$h1,
-						_List_Nil,
-						_List_fromArray(
-							[
-								$elm$html$Html$text('My Projects')
-							])),
-						$elm$html$Html$text('This site is under construction. In a few Days you will see more about me here')
-					]));
+			return $author$project$MyProjects$myProjectsView;
 		case 'About':
-			return A2(
-				$elm$html$Html$div,
-				_List_Nil,
-				_List_fromArray(
-					[
-						A2(
-						$elm$html$Html$h1,
-						_List_Nil,
-						_List_fromArray(
-							[
-								$elm$html$Html$text('About me')
-							])),
-						$elm$html$Html$text('This site is under construction. In a few Days you will see more about me here')
-					]));
+			return $author$project$AboutMe$aboutMeView;
 		default:
-			return $author$project$Main$pageInitView;
+			return $author$project$Page$pageInitView;
 	}
 };
 var $elm$html$Html$span = _VirtualDom_node('span');
@@ -5367,7 +5495,7 @@ var $author$project$Main$view = function (model) {
 				$author$project$Styles$subGridStyles,
 				_List_fromArray(
 					[
-						$author$project$Main$pageContentView(model)
+						$author$project$Page$pageContentView(model.page)
 					]))
 			]));
 };

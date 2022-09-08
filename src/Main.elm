@@ -42,7 +42,7 @@ view model =
             , span (onClick About :: clickableStyle) [ text "About me" ]
             ]
         , br [] []
-        , div subGridStyles [ pageContentView model ]
+        , div subGridStyles [ Page.pageContentView model.page ]
         ]
 
 
@@ -57,27 +57,3 @@ update msg model =
 
         Home ->
             ( { model | page = Page.None }, Cmd.none )
-
-
-pageContentView : Model -> Html Msg
-pageContentView model =
-    case model.page of
-        Page.Projects ->
-            div []
-                [ h1 [] [ text "My Projects" ]
-                , text "This site is under construction. In a few Days you will see more about me here"
-                ]
-
-        Page.About ->
-            div []
-                [ h1 [] [ text "About me" ]
-                , text "This site is under construction. In a few Days you will see more about me here"
-                ]
-
-        Page.None ->
-            pageInitView
-
-
-pageInitView : Html Msg
-pageInitView =
-    div [] [ text "Hi, I am Philipp. I am a Software Developer from Flensburg Germany. On this Page you will find something about me and my projects. Have fun while exploring it" ]

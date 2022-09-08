@@ -55,6 +55,7 @@ headerGridStyles : List (Attribute msg)
 headerGridStyles =
     [ style "grid-row" "1/2"
     , style "grid-column" "1/ span 2"
+    , style "border-bottom" "solid 2px lightgray"
     ]
 
 
