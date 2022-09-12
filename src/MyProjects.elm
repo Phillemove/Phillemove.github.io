@@ -20,7 +20,7 @@ myProjectsView =
             ]
         , text "As Semester Project i was part of a developing Team for a java linter made with haskell programming language."
         , br [] []
-        , text "For another Course a good friend an me programmed a small web application with elm programming language."
+        , text "For another Course a good friend and me programmed a small web application with elm programming language."
         , br [] []
         , text "As Bachelor Thesis project i designed and programmed an openapi-code generator for ktor server applications. This generator is completly written in kotlin code, which is my standard programming language to use."
         ]

@@ -38,8 +38,8 @@ view model =
         [ div headerGridStyles
             [ h1 [] [ text "Phillemove - Sofware Developer" ]
             , span (onClick Home :: clickableStyle) [ text "Home" ]
-            , span (onClick Projects :: clickableStyle) [ text "Projects" ]
             , span (onClick About :: clickableStyle) [ text "About me" ]
+            , span (onClick Projects :: clickableStyle) [ text "Projects" ]
             ]
         , br [] []
         , div subGridStyles [ Page.pageContentView model.page ]
