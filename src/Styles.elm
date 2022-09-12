@@ -1,10 +1,8 @@
 module Styles exposing
-    ( buttonStyles
-    , clickableStyle
+    ( clickableStyle
     , displayNone
     , fontStyle
     , headerGridStyles
-    , liStyle
     , mainGridStyles
     , subGridStyles
     )
@@ -23,17 +21,6 @@ mainGridStyles =
     , style "margin-top" "0.1em"
     , style "font-family" "verdana"
     , style "background-color" "white"
-    ]
-
-
-buttonStyles : List (Attribute msg)
-buttonStyles =
-    [ style "font-size" "1.5em"
-    , style "padding" "10px"
-    , style "width" "8%"
-    , style "float" "right"
-    , style "border" "solid 1px black"
-    , style "border-radius" "5px"
     ]
 
 
@@ -56,16 +43,6 @@ headerGridStyles =
     [ style "grid-row" "1/2"
     , style "grid-column" "1/ span 2"
     , style "border-bottom" "solid 2px lightgray"
-    ]
-
-
-liStyle : List (Attribute msg)
-liStyle =
-    [ style "display" "inline-block"
-    , style "flex-direction" "row"
-    , style "flex-wrap" "wrap"
-    , style "border" "solid black 1px"
-    , style "padding" "0.3em"
     ]
 
 

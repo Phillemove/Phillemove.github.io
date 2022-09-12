@@ -5393,9 +5393,26 @@ var $author$project$AboutMe$aboutMeView = A2(
 								[
 									$elm$html$Html$text('MongoDB')
 								]))
-						]))
+						])),
+					A2($elm$html$Html$br, _List_Nil, _List_Nil),
+					$elm$html$Html$text('Today i work as a Software developer and i am responsible for the development of web applications.')
 				]))
 		]));
+var $elm$html$Html$a = _VirtualDom_node('a');
+var $elm$json$Json$Encode$string = _Json_wrap;
+var $elm$html$Html$Attributes$stringProperty = F2(
+	function (key, string) {
+		return A2(
+			_VirtualDom_property,
+			key,
+			$elm$json$Json$Encode$string(string));
+	});
+var $elm$html$Html$Attributes$href = function (url) {
+	return A2(
+		$elm$html$Html$Attributes$stringProperty,
+		'href',
+		_VirtualDom_noJavaScriptUri(url));
+};
 var $author$project$MyProjects$myProjectsView = A2(
 	$elm$html$Html$div,
 	_List_Nil,
@@ -5408,7 +5425,100 @@ var $author$project$MyProjects$myProjectsView = A2(
 				[
 					$elm$html$Html$text('My Projects')
 				])),
-			$elm$html$Html$text('This site is under construction. In a few Days you will see more about me here')
+			$elm$html$Html$text('During my studies and carrer i developed a few projects.'),
+			A2($elm$html$Html$br, _List_Nil, _List_Nil),
+			$elm$html$Html$text('The Projects the list below you can have a look to it.'),
+			A2(
+			$elm$html$Html$ul,
+			_List_Nil,
+			_List_fromArray(
+				[
+					A2(
+					$elm$html$Html$li,
+					_List_Nil,
+					_List_fromArray(
+						[
+							A2(
+							$elm$html$Html$a,
+							_List_fromArray(
+								[
+									$elm$html$Html$Attributes$href('https://github.com/Phillemove/minesweeper')
+								]),
+							_List_fromArray(
+								[
+									$elm$html$Html$text('Minesweeper Game')
+								]))
+						])),
+					A2(
+					$elm$html$Html$li,
+					_List_Nil,
+					_List_fromArray(
+						[
+							A2(
+							$elm$html$Html$a,
+							_List_fromArray(
+								[
+									$elm$html$Html$Attributes$href('https://github.com/Phillemove/viergewinnt')
+								]),
+							_List_fromArray(
+								[
+									$elm$html$Html$text('Four in a Row Game')
+								]))
+						])),
+					A2(
+					$elm$html$Html$li,
+					_List_Nil,
+					_List_fromArray(
+						[
+							A2(
+							$elm$html$Html$a,
+							_List_fromArray(
+								[
+									$elm$html$Html$Attributes$href('https://github.com/Phillemove/twitterwall')
+								]),
+							_List_fromArray(
+								[
+									$elm$html$Html$text('Twitterwall Web Application')
+								]))
+						])),
+					A2(
+					$elm$html$Html$li,
+					_List_Nil,
+					_List_fromArray(
+						[
+							A2(
+							$elm$html$Html$a,
+							_List_fromArray(
+								[
+									$elm$html$Html$Attributes$href('https://github.com/Phillemove/Lernkartenapp')
+								]),
+							_List_fromArray(
+								[
+									$elm$html$Html$text('Learning Card Application')
+								]))
+						])),
+					A2(
+					$elm$html$Html$li,
+					_List_Nil,
+					_List_fromArray(
+						[
+							A2(
+							$elm$html$Html$a,
+							_List_fromArray(
+								[
+									$elm$html$Html$Attributes$href('https://github.com/Phillemove/planningtool')
+								]),
+							_List_fromArray(
+								[
+									$elm$html$Html$text('Calendar and Contact Management Application')
+								]))
+						]))
+				])),
+			$elm$html$Html$text('As Semester Project i was part of a developing Team for a java linter made with haskell programming language.'),
+			A2($elm$html$Html$br, _List_Nil, _List_Nil),
+			$elm$html$Html$text('For another Course a good friend an me programmed a small web application with elm programming language.'),
+			A2($elm$html$Html$br, _List_Nil, _List_Nil),
+			$elm$html$Html$text('As Bachelor Thesis project i designed and programmed an openapi-code generator for ktor server applications. This generator is completly written in kotlin code, which is my standard programming language to use.')
 		]));
 var $author$project$Page$pageInitView = A2(
 	$elm$html$Html$div,

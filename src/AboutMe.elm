@@ -32,5 +32,7 @@ aboutMeView =
                 , li [] [ text "SQL" ]
                 , li [] [ text "MongoDB" ]
                 ]
+            , br [] []
+            , text "Today i work as a Software developer and i am responsible for the development of web applications."
             ]
         ]
