@@ -17,6 +17,7 @@ myProjectsView =
             , li [] [ a [ href "https://github.com/Phillemove/twitterwall" ] [ text "Twitterwall Web Application" ] ]
             , li [] [ a [ href "https://github.com/Phillemove/Lernkartenapp" ] [ text "Learning Card Application" ] ]
             , li [] [ a [ href "https://github.com/Phillemove/planningtool" ] [ text "Calendar and Contact Management Application" ] ]
+            , li [] [ a [ href "https://github.com/Phillemove/elearning-plattform" ] [ text "ELearning Platform" ] ]
             ]
         , text "As Semester Project i was part of a developing Team for a java linter made with haskell programming language."
         , br [] []
