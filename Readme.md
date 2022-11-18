@@ -1,3 +1,2 @@
-# Github Pages Repository
+# Github Pages Repository made with React
 
-made with Elm Programming Language
