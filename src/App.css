@@ -43,3 +43,44 @@
 .Font-style {
   font-weight: bold;
 }
+
+.Contact {
+  display: grid;
+  grid-template-rows: 50% 50%;
+  grid-template-columns: 10% 90%;
+}
+
+.Label {
+  grid-column: 1/2;
+}
+
+.Email {
+  grid-row: 1/2;
+  grid-column: 2/2;
+}
+
+.Message {
+  grid-row: 2/2;
+  grid-column: 2/2;
+}
+
+.Button {
+  grid-column: 1/2;
+}
+
+#labelEmail {
+  grid-row: 1/2;
+}
+
+#labelMessage {
+  grid-row: 2/2;
+}
+
+#email {
+  width: 20em;
+  height: 1.5em;
+}
+
+#message {
+  width: 20em;
+}

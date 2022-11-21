@@ -1,14 +1,13 @@
 import './App.css';
 import React from 'react';
-
-
+import { useForm, ValidationError } from '@formspree/react';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       page: 'Home',
-      pages: ['Home', 'About Me', 'Projects'],
+      pages: ['Home', 'About Me', 'Projects', 'Contact'],
     }
   }
 
@@ -47,6 +46,8 @@ class Appbody extends React.Component {
         return <AboutMe />
       case "Projects":
         return <Projects />
+      case "Contact":
+        return <Contact />
     }
   }
 
@@ -149,6 +150,53 @@ function Projects() {
           <p>As Bachelor Thesis project i designed and programmed an openapi-code generator for ktor server applications. This generator is completly written in kotlin code.</p>
         </article>
       </div>
+    </div>
+  );
+}
+
+function Contact() {
+  const [state, handleSubmit] = useForm("xoqbbwjz");
+  if (state.succeeded) {
+    return <p>Thank you for your Request</p>;
+  }
+  return (
+    <div>
+      <h3>Contact Me</h3>
+      <p>If you have any Questions or need Help realizing your Project Idea, you can contact me here</p>
+      <form onSubmit={handleSubmit} className="Contact">
+        <label htmlFor="email" className='Label' id='labelEmail'>
+          Email
+        </label>
+        <input
+          id="email"
+          type="email"
+          name="email"
+          className='Email'
+        />
+        <ValidationError
+          prefix="Email"
+          field="email"
+          errors={state.errors}
+        />
+        <br />
+        <label htmlFor='message' className='Label' id='labelMessage'>
+          Message
+        </label>
+        <textarea
+          id="message"
+          name="message"
+          className='Message'
+        />
+        <ValidationError
+          prefix="Message"
+          field="message"
+          errors={state.errors}
+        />
+        <br />
+        <button type="submit" disabled={state.submitting} className="Button">
+          Send
+        </button>
+      </form>
     </div>
   );
 }
