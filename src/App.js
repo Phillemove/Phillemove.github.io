@@ -112,6 +112,7 @@ function AboutMe() {
           <li>JavaScript</li>
           <li>React</li>
           <li>C#</li>
+          <li>Delphi</li>
           <li>HTML</li>
           <li>CSS</li>
           <li>Unity 3D</li>
@@ -145,6 +146,7 @@ function Projects() {
             <li><a href='https://github.com/Phillemove/elearning-plattform'>ELearning Plattform</a></li>
             <li><a href='https://github.com/Phillemove/FoodFacts'>Food Facts Application</a></li>
             <li><a href='https://github.com/Phillemove/OpenAPIGenerator'>Open API Generator</a></li>
+            <li><a href='https://github.com/Phillemove/snake'>Snake Game</a></li>
           </ul>
           <p>As Semester Project i was part of a developing Team for a java linter made with haskell programming language.</p>
           <p>As Bachelor Thesis project i designed and programmed an openapi-code generator for ktor server applications. This generator is completly written in kotlin code.</p>
