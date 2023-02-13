@@ -135,7 +135,7 @@ function Projects() {
       <h3>Projects</h3>
       <div>
         <article>
-          <p>During my studies and carrer i developed a few projects. </p>
+          <p>During my studies and career i developed a few projects. </p>
           <p>The Projects the list below you can have a look to it.</p>
           <ul>
             <li><a href='https://github.com/Phillemove/minesweeper'>Minesweeper Game</a></li>
